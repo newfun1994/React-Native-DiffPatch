@@ -1,0 +1,10 @@
+# references:
+# * http://www.objc.io/issue-6/travis-ci.html
+# * https://github.com/supermarin/xcpretty#usage
+
+language: objective-c
+osx_image: xcode7.2
+
+script:
+- set -o pipefail && xcodebuild test -project DiffMatchPatch.xcodeproj -scheme DiffMatchPatch  -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.2'  -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES | xcpretty
+- pod lib lint --allow-warnings
