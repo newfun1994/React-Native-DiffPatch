@@ -1,4 +1,6 @@
 # react-native增量更新demo
-1. diffmatchpatch修改版
-2. mac端增量包生成工具
-3. demo
+1. diffmatchpatch修改版 - diffmatchpatch
+2. mac端增量包生成工具 - AutoDiff
+3. demo - demo
+
+mac端增量包生成工具免编译版下载地址：<http://newfun1994.github.io/react-native-DiffPatch/AutoDiff.zip>
