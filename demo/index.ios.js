@@ -16,7 +16,7 @@ class diffpatch extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          v0.1111111111111111
         </Text>
       </View>
     );

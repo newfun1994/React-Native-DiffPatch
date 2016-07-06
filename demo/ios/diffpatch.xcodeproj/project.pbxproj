@@ -13,9 +13,14 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* diffpatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* diffpatchTests.m */; };
+		0C22E69D1CCA25720056A038 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C22E69C1CCA25720056A038 /* libbz2.tbd */; };
+		0C442D271CD3099500CAC6BB /* bsdiff.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C442D211CD3099500CAC6BB /* bsdiff.c */; };
+		0C442D281CD3099500CAC6BB /* bspatch.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C442D231CD3099500CAC6BB /* bspatch.c */; };
+		0C442D291CD3099500CAC6BB /* DiffPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C442D261CD3099500CAC6BB /* DiffPatch.m */; };
 		0C4F393D1CA1A91E0003CB6C /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		0C4F39441CA1AEFF0003CB6C /* oldmain.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C4F39431CA1AEFF0003CB6C /* oldmain.jsbundle */; };
-		0CDC13C41CA9615000FE2C68 /* DiffMatchPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CDC13C31CA9615000FE2C68 /* DiffMatchPatch.framework */; };
+		0C65CF881CC772920047F506 /* patchClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C65CF871CC772920047F506 /* patchClass.m */; };
+		0C65CF8C1CC779E70047F506 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C65CF8B1CC779E70047F506 /* config.plist */; };
+		0C65CF8E1CC784A90047F506 /* 0.1.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C65CF8D1CC784A90047F506 /* 0.1.jsbundle */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -69,34 +74,6 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = diffpatch;
 		};
-		0C68995A1CA93EF300970D31 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0C6899531CA93EF300970D31 /* DiffMatchPatch.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
-			remoteInfo = DiffMatchPatch;
-		};
-		0C68995C1CA93EF300970D31 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0C6899531CA93EF300970D31 /* DiffMatchPatch.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5AD1E7CE1AE266530017CEEE;
-			remoteInfo = "DiffMatchPatch-OSX";
-		};
-		0C68995E1CA93EF300970D31 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0C6899531CA93EF300970D31 /* DiffMatchPatch.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3D5BC0AF128CA8E200B8F5FF;
-			remoteInfo = DiffMatchPatchTest;
-		};
-		0C6899601CA93EF300970D31 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0C6899531CA93EF300970D31 /* DiffMatchPatch.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6FF402C51AE4F71400ED7FEB;
-			remoteInfo = "DiffMatchPatch OSX Tests";
-		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */;
@@ -143,9 +120,17 @@
 		00E356EE1AD99517003FC87E /* diffpatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = diffpatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* diffpatchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = diffpatchTests.m; sourceTree = "<group>"; };
-		0C4F39431CA1AEFF0003CB6C /* oldmain.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = oldmain.jsbundle; sourceTree = "<group>"; };
-		0C6899531CA93EF300970D31 /* DiffMatchPatch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DiffMatchPatch.xcodeproj; path = "aerogear-diffmatchpatch-ios-master/DiffMatchPatch.xcodeproj"; sourceTree = "<group>"; };
-		0CDC13C31CA9615000FE2C68 /* DiffMatchPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DiffMatchPatch.framework; sourceTree = "<group>"; };
+		0C22E69C1CCA25720056A038 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		0C442D211CD3099500CAC6BB /* bsdiff.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bsdiff.c; sourceTree = "<group>"; };
+		0C442D221CD3099500CAC6BB /* bsdiff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bsdiff.h; sourceTree = "<group>"; };
+		0C442D231CD3099500CAC6BB /* bspatch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bspatch.c; sourceTree = "<group>"; };
+		0C442D241CD3099500CAC6BB /* bspatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bspatch.h; sourceTree = "<group>"; };
+		0C442D251CD3099500CAC6BB /* DiffPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiffPatch.h; sourceTree = "<group>"; };
+		0C442D261CD3099500CAC6BB /* DiffPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiffPatch.m; sourceTree = "<group>"; };
+		0C65CF861CC772920047F506 /* patchClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = patchClass.h; sourceTree = "<group>"; };
+		0C65CF871CC772920047F506 /* patchClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = patchClass.m; sourceTree = "<group>"; };
+		0C65CF8B1CC779E70047F506 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		0C65CF8D1CC784A90047F506 /* 0.1.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 0.1.jsbundle; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* diffpatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = diffpatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C22E69D1CCA25720056A038 /* libbz2.tbd in Frameworks */,
 				0C4F393D1CA1A91E0003CB6C /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -181,7 +167,6 @@
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
-				0CDC13C41CA9615000FE2C68 /* DiffMatchPatch.framework in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,15 +231,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0C6899541CA93EF300970D31 /* Products */ = {
+		0C442D1F1CD3099500CAC6BB /* diffpatch */ = {
 			isa = PBXGroup;
 			children = (
-				0C68995B1CA93EF300970D31 /* DiffMatchPatch.framework */,
-				0C68995D1CA93EF300970D31 /* DiffMatchPatch.framework */,
-				0C68995F1CA93EF300970D31 /* DiffMatchPatchTest.xctest */,
-				0C6899611CA93EF300970D31 /* DiffMatchPatch OSX Tests.xctest */,
+				0C442D201CD3099500CAC6BB /* bsdiff */,
+				0C442D251CD3099500CAC6BB /* DiffPatch.h */,
+				0C442D261CD3099500CAC6BB /* DiffPatch.m */,
 			);
-			name = Products;
+			name = diffpatch;
+			path = diffpatch/diffpatch;
+			sourceTree = "<group>";
+		};
+		0C442D201CD3099500CAC6BB /* bsdiff */ = {
+			isa = PBXGroup;
+			children = (
+				0C442D211CD3099500CAC6BB /* bsdiff.c */,
+				0C442D221CD3099500CAC6BB /* bsdiff.h */,
+				0C442D231CD3099500CAC6BB /* bspatch.c */,
+				0C442D241CD3099500CAC6BB /* bspatch.h */,
+			);
+			path = bsdiff;
 			sourceTree = "<group>";
 		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
@@ -273,18 +269,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* diffpatch */ = {
+		13B07FAE1A68108700A75B9A /* diffpatchdemo */ = {
 			isa = PBXGroup;
 			children = (
-				0C4F39431CA1AEFF0003CB6C /* oldmain.jsbundle */,
+				0C65CF8D1CC784A90047F506 /* 0.1.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				0C65CF8B1CC779E70047F506 /* config.plist */,
+				0C65CF861CC772920047F506 /* patchClass.h */,
+				0C65CF871CC772920047F506 /* patchClass.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = diffpatch;
+			name = diffpatchdemo;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
@@ -306,8 +305,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				0CDC13C31CA9615000FE2C68 /* DiffMatchPatch.framework */,
-				0C6899531CA93EF300970D31 /* DiffMatchPatch.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -333,7 +330,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* diffpatch */,
+				0C22E69C1CCA25720056A038 /* libbz2.tbd */,
+				0C442D1F1CD3099500CAC6BB /* diffpatch */,
+				13B07FAE1A68108700A75B9A /* diffpatchdemo */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* diffpatchTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -419,10 +418,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 0C6899541CA93EF300970D31 /* Products */;
-					ProjectRef = 0C6899531CA93EF300970D31 /* DiffMatchPatch.xcodeproj */;
-				},
-				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
 				},
@@ -507,34 +502,6 @@
 			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0C68995B1CA93EF300970D31 /* DiffMatchPatch.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DiffMatchPatch.framework;
-			remoteRef = 0C68995A1CA93EF300970D31 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0C68995D1CA93EF300970D31 /* DiffMatchPatch.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DiffMatchPatch.framework;
-			remoteRef = 0C68995C1CA93EF300970D31 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0C68995F1CA93EF300970D31 /* DiffMatchPatchTest.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = DiffMatchPatchTest.xctest;
-			remoteRef = 0C68995E1CA93EF300970D31 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0C6899611CA93EF300970D31 /* DiffMatchPatch OSX Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "DiffMatchPatch OSX Tests.xctest";
-			remoteRef = 0C6899601CA93EF300970D31 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -584,9 +551,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C65CF8E1CC784A90047F506 /* 0.1.jsbundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				0C4F39441CA1AEFF0003CB6C /* oldmain.jsbundle in Resources */,
+				0C65CF8C1CC779E70047F506 /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,7 +591,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				0C442D281CD3099500CAC6BB /* bspatch.c in Sources */,
+				0C65CF881CC772920047F506 /* patchClass.m in Sources */,
+				0C442D291CD3099500CAC6BB /* DiffPatch.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				0C442D271CD3099500CAC6BB /* bsdiff.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
