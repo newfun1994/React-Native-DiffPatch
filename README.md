@@ -6,6 +6,17 @@ diffpatch已经封装完成，在objective-c下可以直接使用
 
 注意：`使用diffpatch要导入libbz2.tbd`
 
+抱歉之前一直没有将AutoDiff开源，在创建项目时，选择了本地git，一直没注意，导致工程一直没有被上传。
+
+### 更新日志
+2016.3月 热更新验证成功，制作增量包一键生成工具
+
+2016.4月 替换对比算法，弃用谷歌提供的算法。增加patch合成测试
+
+2016.7.6 优化工具使用体验，增加新旧地址路径交换，patch测试时无需修改newBundel文件名，解除对jsbundle上传限制
+
+该工具可以对任何两个文件进行差异化对比并合并
+
 1. diffmatchpatch修改版（弃用） - diffmatchpatch
 2. mac端增量包生成工具 - AutoDiff
 3. demo - demo
@@ -25,5 +36,3 @@ mac端增量包生成工具免编译版下载地址：<http://newfun1994.github.
 
 **热更新可行性验证成功**
 
-## ToDo
-具体解决实现方案
